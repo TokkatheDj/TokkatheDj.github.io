@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lance Massey</title>
+<meta name="description" content="Secondary-school teacher who builds and ships classroom software: maths manipulatives, VR math rooms, a games arcade, and full-stack web apps.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f6f5c'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='white' text-anchor='middle'%3ELM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;750&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6f2; --card:#ffffff; --ink:#1d2321; --muted:#5b6461; --line:#e2e0d8;
+  --accent:#1f6f5c; --accent-ink:#ffffff; --chip:#e7f1ed;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121614; --card:#1b201e; --ink:#e9ecea; --muted:#a3aca8; --line:#2c3330;
+    --accent:#5fc3a6; --accent-ink:#0d1210; --chip:#20302b;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121614; --card:#1b201e; --ink:#e9ecea; --muted:#a3aca8; --line:#2c3330;
+  --accent:#5fc3a6; --accent-ink:#0d1210; --chip:#20302b;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+header{padding:56px 0 32px}
+h1{font:600 clamp(2rem,6vw,3rem)/1.1 "Source Serif 4",Georgia,serif;margin:0 0 12px;letter-spacing:-.01em}
+.lede{font-size:1.15rem;max-width:40em;margin:0 0 24px}
+.lede strong{font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none;
+  border:1px solid var(--accent);min-height:44px}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+h2{font:600 1.5rem/1.2 "Source Serif 4",Georgia,serif;margin:48px 0 16px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column}
+.card h3{margin:0 0 4px;font-size:1.1rem}
+.for{margin:0 0 10px;color:var(--muted);font-size:.9rem}
+.card p{margin:0 0 12px}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin:auto 0 12px;padding:0;list-style:none}
+.stack li{background:var(--chip);border-radius:999px;padding:2px 10px;font-size:.8rem}
+.links{display:flex;gap:16px;font-weight:600}
+.how{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));padding:0;list-style:none;margin:0}
+.how li{border-left:3px solid var(--accent);padding:2px 0 2px 14px}
+.how b{display:block}
+.writing{list-style:none;padding:0;margin:0}
+.writing li{padding:14px 0;border-top:1px solid var(--line)}
+.writing li:last-child{border-bottom:1px solid var(--line)}
+.writing a{font-weight:600}
+.writing span{display:block;color:var(--muted)}
+footer{padding:48px 0 40px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Lance Massey</h1>
+  <p class="lede">A <strong>secondary-school teacher who builds and ships software</strong>.
+  I build classroom tools: maths manipulatives, worksheets that grade by mathematical value,
+  VR math rooms, and games. I also build full-stack apps to a professional standard.
+  The parts I care most about are the ones that are easy to skip: tests on the maths,
+  accessibility, and writing down why a decision was made.</p>
+  <div class="btns">
+    <a class="btn primary" href="#work">See the work</a>
+    <a class="btn" href="https://github.com/TokkatheDj">GitHub</a>
+    <a class="btn" href="#writing">Write-ups</a>
+  </div>
+</header>
+
+<main>
+<section id="work">
+  <h2>Selected work</h2>
+  <div class="grid">
+
+    <article class="card">
+      <h3>Math Tools</h3>
+      <p class="for">For students · classroom manipulatives</p>
+      <p>Algebra tiles, a balance scale, fractions, a number line, place value and probability,
+      all in the browser. The balance scale solves for x on either side, fractions and negatives
+      included, and it has tests that prove it.</p>
+      <ul class="stack"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind</li></ul>
+      <div class="links"><a href="https://tokkathedj.github.io/MathTools/">Try it</a><a href="https://github.com/TokkatheDj/MathTools">Code</a></div>
+    </article>
+
+    <article class="card">
+      <h3>VR Math Rooms</h3>
+      <p class="for">For students · Meta Quest headset</p>
+      <p>Plot points and read off the slope, stand on y = mx + b and feel the hill change as m
+      changes, and test the 50/30/20 budget rule on real take-home pay. You move by blinking
+      instead of gliding, to spare stomachs.</p>
+      <ul class="stack"><li>WebXR</li><li>A-Frame</li><li>No build step</li></ul>
+      <div class="links"><a href="https://tokkathedj.github.io/vr-apps/">Open on a Quest</a><a href="https://github.com/TokkatheDj/vr-apps">Code</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Games Arcade</h3>
+      <p class="for">For classrooms and families · no install</p>
+      <p>Party, carnival and kids' games in one searchable catalog, plus maths worksheets that
+      accept <code>2(x+3)</code> for <code>2x+6</code>. Every new game is played on phone and
+      tablet screens each night by a test that presses Start and plays it.</p>
+      <ul class="stack"><li>HTML/JS</li><li>Playwright</li><li>GitHub Pages</li></ul>
+      <div class="links"><a href="https://tokkathedj.github.io/party-command-games/">Play</a><a href="https://github.com/TokkatheDj/party-command-games">Code</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Canopy HR</h3>
+      <p class="for">Full-stack product · built to a professional standard</p>
+      <p>A complete HR platform covering hiring, onboarding, time off, timesheets, payroll,
+      reviews and surveys. One approval engine handles every request type. Role checks are
+      enforced on the server, and every page passes axe-core accessibility checks in light
+      and dark themes.</p>
+      <ul class="stack"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li><li>CI</li></ul>
+      <div class="links"><a href="https://canopy-hr.vercel.app">Live demo</a><a href="https://github.com/TokkatheDj/canopy-hr">Code</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Paper Edit</h3>
+      <p class="for">Creator tool · runs entirely on your own machine</p>
+      <p>Edit long-form video and podcasts by editing the transcript, with no cloud, no
+      subscription and no account. Export went from about 30 minutes to about 4, checked
+      frame by frame against the old output.</p>
+      <ul class="stack"><li>Python</li><li>FastAPI</li><li>Whisper</li><li>FFmpeg</li></ul>
+      <div class="links"><a href="https://github.com/TokkatheDj/paper-edit">Code</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Amigo</h3>
+      <p class="for">Local AI at home · code private</p>
+      <p>A local-only AI assistant where nothing leaves the house. Language models and speech
+      run on a home GPU, a Raspberry Pi wakes the desktop when it's needed, and there's a
+      microcontroller on the desk and games for my kids. It keeps a dated log of what broke
+      and why.</p>
+      <ul class="stack"><li>Python</li><li>Ollama</li><li>Raspberry Pi</li><li>Microcontrollers</li></ul>
+      <div class="links"><a href="https://github.com/TokkatheDj/TokkatheDj/blob/master/writing/believe-the-photograph.md">Read the write-up</a></div>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <h2>How I work</h2>
+  <ul class="how">
+    <li><b>Test the maths, not just the page</b>Checking my own worksheet grader turned up
+    716 wrong answers it was accepting. It now accepts none, and a weekly check runs against
+    the live sites.</li>
+    <li><b>Design with the student, not for them</b>My son is the client for the kids' tools.
+    One sentence from him redirected a design I'd spent five versions on.</li>
+    <li><b>Ship on a teacher's schedule</b>Each fix becomes a one-line step that I can run and
+    verify from my phone, so work gets live in the evening between grading and bedtime.</li>
+  </ul>
+</section>
+
+<section id="writing">
+  <h2>Writing</h2>
+  <ul class="writing">
+    <li><a href="https://github.com/TokkatheDj/TokkatheDj/blob/master/writing/shipping-on-a-teachers-schedule.md">Shipping on a teacher's schedule</a>
+      <span>A one-page list, a Y/N runner and a weekly health check, and the things that broke on the way.</span></li>
+    <li><a href="https://github.com/TokkatheDj/TokkatheDj/blob/master/writing/the-client-is-a-kid.md">The client is a kid</a>
+      <span>What one sentence from my son changed about designing for students.</span></li>
+    <li><a href="https://github.com/TokkatheDj/TokkatheDj/blob/master/writing/tests-that-play-the-game.md">Tests that play the game</a>
+      <span>Three checks said a game was fine; fifteen seconds of playing it said otherwise.</span></li>
+    <li><a href="https://github.com/TokkatheDj/TokkatheDj/blob/master/writing/believe-the-photograph.md">Believe the photograph</a>
+      <span>Three bugs that passed every test I had, and what finally caught each one.</span></li>
+    <li><a href="https://github.com/TokkatheDj/TokkatheDj/blob/master/writing/three-ways-a-working-system-stops-working.md">Three ways a working system stops working</a>
+      <span>A week of keeping a home server up: crashes that were really deploys, and safety nets that switched each other off.</span></li>
+  </ul>
+</section>
+</main>
+
+<footer>
+  <p>More detail, kept current: <a href="https://github.com/TokkatheDj">github.com/TokkatheDj</a></p>
+</footer>
+</div>
+</body>
+</html>

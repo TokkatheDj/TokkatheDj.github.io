@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tokka Live</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg:#0d0b14; --ink:#f3f0ff; --muted:#a59cc4; --hot:#ff3d8b; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--ink);
+    font:18px/1.45 system-ui, "Segoe UI", sans-serif; }
+  main { min-height:100%; display:grid; place-items:center; text-align:center;
+    padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); }
+  h1 { margin:0 0 .3em; font-size:34px; letter-spacing:.03em; } h1 b { color:var(--hot); }
+  p { margin:.3em 0; color:var(--muted); }
+</style>
+</head>
+<body>
+<main><div>
+  <h1>TOKKA <b>LIVE</b></h1>
+  <p id="msg">Finding tonight's request line…</p>
+</div></main>
+<script>
+// The TOKKA Popl stand points here, forever. On gig nights Tokka Live writes tonight's
+// address into live.json next to this page; this page forwards the phone there.
+// A stale address (over 12 hours old) means the gig ended without saying so.
+(async () => {
+  const msg = document.getElementById('msg');
+  try {
+    const r = await fetch('live.json?t=' + Date.now(), { cache: 'no-store' });
+    const d = await r.json();
+    const fresh = d.url && /^https:\/\/[a-z0-9-]+\.trycloudflare\.com$/.test(d.url) &&
+                  (Date.now() / 1000 - d.at) < 12 * 3600;
+    if (fresh) { location.replace(d.url); return; }
+  } catch (e) {}
+  msg.textContent = "Requests are closed right now. See you at the next dance!";
+})();
+</script>
+</body>
+</html>

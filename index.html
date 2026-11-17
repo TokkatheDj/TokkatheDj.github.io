@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lance Massey</title>
-<meta name="description" content="Secondary-school teacher who builds and ships classroom software: maths manipulatives, VR math rooms, a games arcade, and full-stack web apps.">
+<meta name="description" content="Secondary-school teacher who builds and ships classroom software: maths manipulatives, VR math rooms, a games arcade, K-12 worksheets, choose-your-path stories, a home AI assistant, and full-stack web apps.">
 <!-- what a pasted link shows (LinkedIn, Slack, messages) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Lance Massey - teacher who builds and ships software">
-<meta property="og:description" content="Secondary-school teacher who builds and ships classroom software: maths manipulatives, VR math rooms, a games arcade, and full-stack web apps.">
+<meta property="og:description" content="Secondary-school teacher who builds and ships classroom software: maths manipulatives, VR math rooms, a games arcade, K-12 worksheets, choose-your-path stories, a home AI assistant, and full-stack web apps.">
 <meta property="og:url" content="https://tokkathedj.github.io/">
 <meta property="og:image" content="https://tokkathedj.github.io/og.png">
 <meta property="og:image:width" content="1200">
@@ -152,13 +152,47 @@ footer{padding:48px 0 40px;color:var(--muted);font-size:.9rem}
 
     <article class="card">
       <h3>Amigo</h3>
-      <p class="for">Local AI at home · code private</p>
-      <p>A local-only AI assistant where nothing leaves the house. Language models and speech
-      run on a home GPU, a Raspberry Pi wakes the desktop when it's needed, and there's a
-      microcontroller on the desk and games for my kids. It keeps a dated log of what broke
-      and why.</p>
-      <ul class="stack"><li>Python</li><li>Ollama</li><li>Raspberry Pi</li><li>Microcontrollers</li></ul>
+      <p class="for">Home AI on my own hardware · code private</p>
+      <p>One assistant that answers the same way on the phone, the watch, smart glasses and Home
+      Assistant, with its language models and speech on a home GPU. Current questions are looked
+      up on the web, and a fact check keeps an answer only if the pages say it: a claim found on
+      one site gets "double-check it", and nothing confirmed gets "I won't guess". Only the
+      question leaves the house, never notes or chats. For my kids it answers who holds an office
+      or who won, never the news. When it mishears, it says "Sorry, I didn't catch that".</p>
+      <ul class="stack"><li>Python</li><li>Ollama</li><li>Whisper</li><li>Raspberry Pi</li><li>Microcontrollers</li></ul>
       <div class="links"><a href="https://github.com/TokkatheDj/TokkatheDj/blob/master/writing/believe-the-photograph.md">Read the write-up</a><a href="https://github.com/TokkatheDj/TokkatheDj/blob/master/writing/count-the-printed-rows.md">The desk coquí</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Squad Leader: Frontier</h3>
+      <p class="for">For my son · a space game for one tablet or two</p>
+      <p>A free-roam space RPG and base-builder: mine, rescue wingmates, build an outpost and hunt
+      bosses. A second player can fly a co-pilot ship on the same tablet or join from another one;
+      the co-pilot keeps up, levels up with you, and each half of the screen says whose thumb flies
+      which ship. Saved games never break: the map is fixed and new quests only add on.</p>
+      <ul class="stack"><li>HTML/JS</li><li>Canvas</li><li>Playwright</li></ul>
+      <div class="links"><a href="https://amigo-arcade.vercel.app/games/squad-leader-frontier.html">Play</a><a href="https://github.com/TokkatheDj/party-command-games/blob/master/amigo-arcade-games/squad-leader-frontier.html">Code</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Choices</h3>
+      <p class="for">For teens · illustrated choose-your-path stories</p>
+      <p>Four stories, a first semester, boot camp, a patrol shift and a family at home, where every
+      choice moves three meters (like grades, trust and reputation) toward one of seven endings.
+      A test walks every path through each story, up to 81,405 in one of them, to prove every
+      ending can be reached.</p>
+      <ul class="stack"><li>HTML/JS</li><li>SVG art</li><li>No build step</li></ul>
+      <div class="links"><a href="https://tokkathedj.github.io/party-command-games/shared/choices-first-semester.html">School</a><a href="https://tokkathedj.github.io/party-command-games/shared/choices-boot-camp.html">Boot Camp</a><a href="https://tokkathedj.github.io/party-command-games/shared/choices-patrol.html">Patrol</a><a href="https://tokkathedj.github.io/party-command-games/shared/choices-home.html">Home</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Bulldog Worksheets</h3>
+      <p class="for">For my school · K-12, six subjects</p>
+      <p>199 printable, fill-in worksheets across maths, science, English, art, history and
+      Spanish. The maths and Spanish sheets check answers as they're typed, and every sheet is
+      opened and scanned for accessibility before it goes live.</p>
+      <ul class="stack"><li>HTML/JS</li><li>axe-core</li><li>Netlify</li></ul>
+      <div class="links"><a href="https://bulldog-worksheets.netlify.app/">Open</a></div>
     </article>
 
   </div>
